@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: mega-s03e01-night-status
+    runtime: node
+    plan: free
+    buildCommand: node --check server.mjs && node --check worker.mjs
+    startCommand: node server.mjs
+    healthCheckPath: /healthz
